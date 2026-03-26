@@ -1,9 +1,10 @@
 package week04;
 
-// 父類別（不加 public，避免與檔名的 public class 衝突）
+// 父類別
 class MarineLifeParent {
-    protected String name;
-    protected String habitat;
+    // 加上 final 表示初始化後不可更改
+    protected final String name;
+    protected final String habitat;
 
     public MarineLifeParent(String name, String habitat) {
         this.name = name;
@@ -20,7 +21,7 @@ class MarineLifeParent {
 }
 
 class Fish extends MarineLifeParent {
-    private String scaleColor;
+    private final String scaleColor; // 修正警告：加上 final
 
     public Fish(String name, String habitat, String scaleColor) {
         super(name, habitat); 
@@ -38,7 +39,7 @@ class Fish extends MarineLifeParent {
 }
 
 class Whale extends MarineLifeParent {
-    private double length;
+    private final double length; // 修正警告：加上 final
 
     public Whale(String name, String habitat, double length) {
         super(name, habitat);
@@ -55,13 +56,19 @@ class Whale extends MarineLifeParent {
     }
 }
 
+// 檔名必須為 MarineLife.java
 public class MarineLife {
     public static void main(String[] args) {
+        System.out.println("=== 海洋生物觀察日誌 ===\n");
+
         Fish clownFish = new Fish("小丑魚", "珊瑚礁", "橘白相間");
         System.out.println(clownFish.fishInfo());
-        System.out.println(clownFish.move());
+        System.out.println("移動方式：" + clownFish.move());
+        
+        System.out.println(); // 換行美化
+
         Whale blueWhale = new Whale("藍鯨", "太平洋", 30.0);
         System.out.println(blueWhale.whaleInfo());
-        System.out.println(blueWhale.move());
+        System.out.println("移動方式：" + blueWhale.move());
     }
 }

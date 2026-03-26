@@ -81,6 +81,9 @@ public class OceanSimulator {
             new Shark("大白鯊", "深海"),
             new Turtle("綠蠵龜", "珊瑚礁"),
             new Dolphin("瓶鼻海豚", "近海")
+
+    public static void main(String[] args) {
+        MarineLife[] ocean = {new Shark("大白鯊", "深海")
         };
 
         for (MarineLife creature : ocean) {
@@ -90,4 +93,5 @@ public class OceanSimulator {
             System.out.println();
         }
     }
+}
 }

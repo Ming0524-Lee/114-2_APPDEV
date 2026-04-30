@@ -1,6 +1,6 @@
 # W11 動態資料呈現：RecyclerView + Adapter 模式
 
-> **APP 開發課程** ｜ 第 11 週 ｜ 5/14
+> **APP 開發課程** ｜ 第 11 週 ｜ 5/7
 > **教科書**：Ch07 動態資料呈現
 > **單元**：7-1 ListView 與 RecyclerView 對比　/　7-2 RecyclerView 基本實習　/　7-3 ViewHolder 模式
 > **AI 介入強度**：🔴 完整介入（W10 起）
@@ -352,7 +352,7 @@ holder.itemView.setOnClickListener(v -> {
 
 #### 繳交期限
 
-W12 上課前（5/20）
+W12 上課前（5/13）
 
 ---
 
